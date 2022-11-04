@@ -26,10 +26,8 @@ composer require astrogoat/facebook
 
 ## Usage
 
-```php
-$facebook = new Astrogoat\Facebook();
-echo $facebook->echoPhrase('Hello, Astrogoat!');
-```
+For Facebook Domain Verification, just enable the app and update the site verification with your content ID
+
 
 ## Testing
 

@@ -8,12 +8,12 @@ use Astrogoat\Facebook\Actions\FacebookAction;
 
 class FacebookSettings extends AppSettings
 {
-    // public string $url;
+    public string $site_verification;
 
     public function rules(): array
     {
         return [
-            // 'url' => Rule::requiredIf($this->enabled === true),
+            'site_verification' => 'string',
         ];
     }
 

@@ -3,6 +3,7 @@
 namespace Astrogoat\Facebook;
 
 use Helix\Lego\Apps\App;
+use Helix\Lego\Apps\Services\IncludeFrontendViews;
 use Helix\Lego\LegoManager;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -16,11 +17,11 @@ class FacebookServiceProvider extends PackageServiceProvider
             ->name('facebook')
             ->settings(FacebookSettings::class)
             ->migrations([
-                __DIR__ . '/../database/migrations',
                 __DIR__ . '/../database/migrations/settings',
             ])
-            ->backendRoutes(__DIR__.'/../routes/backend.php')
-            ->frontendRoutes(__DIR__.'/../routes/frontend.php');
+            ->includeFrontendViews(function (IncludeFrontendViews $frontendViews) {
+                return $frontendViews->addToHead('facebook::meta-verification');
+            });
     }
 
     public function registeringPackage()
