@@ -1,20 +1,20 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Astrogoat\Facebook;
 
 use Helix\Lego\Apps\App;
 use Helix\Lego\LegoManager;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Settings\SkeletonSettings;
+use Astrogoat\Facebook\Settings\FacebookSettings;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class FacebookServiceProvider extends PackageServiceProvider
 {
     public function registerApp(App $app)
     {
         return $app
-            ->name('skeleton')
-            ->settings(SkeletonSettings::class)
+            ->name('facebook')
+            ->settings(FacebookSettings::class)
             ->migrations([
                 __DIR__ . '/../database/migrations',
                 __DIR__ . '/../database/migrations/settings',
@@ -32,6 +32,6 @@ class SkeletonServiceProvider extends PackageServiceProvider
 
     public function configurePackage(Package $package): void
     {
-        $package->name('skeleton')->hasConfigFile()->hasViews();
+        $package->name('facebook')->hasConfigFile()->hasViews();
     }
 }

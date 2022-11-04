@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Astrogoat\Facebook\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FacebookCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'facebook';
 
     public $description = 'My command';
 
