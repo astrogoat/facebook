@@ -2,9 +2,8 @@
 
 namespace Astrogoat\Facebook\Settings;
 
-use Helix\Lego\Settings\AppSettings;
-use Illuminate\Validation\Rule;
 use Astrogoat\Facebook\Actions\FacebookAction;
+use Helix\Lego\Settings\AppSettings;
 
 class FacebookSettings extends AppSettings
 {

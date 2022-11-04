@@ -2,9 +2,9 @@
 
 namespace Astrogoat\Facebook\Tests;
 
+use Astrogoat\Facebook\FacebookServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Astrogoat\Facebook\FacebookServiceProvider;
 
 class TestCase extends Orchestra
 {
