@@ -1,24 +1,23 @@
 <?php
 
-namespace VendorName\Skeleton\Settings;
+namespace Astrogoat\Facebook\Settings;
 
+use Astrogoat\Facebook\Actions\FacebookAction;
 use Helix\Lego\Settings\AppSettings;
-use Illuminate\Validation\Rule;
-use VendorName\Skeleton\Actions\SkeletonAction;
 
-class SkeletonSettings extends AppSettings
+class FacebookSettings extends AppSettings
 {
-    // public string $url;
+    public string $site_verification;
 
     public function rules(): array
     {
         return [
-            // 'url' => Rule::requiredIf($this->enabled === true),
+            'site_verification' => 'string',
         ];
     }
 
     // protected static array $actions = [
-    //     SkeletonAction::class,
+    //     FacebookAction::class,
     // ];
 
     // public static function encrypted(): array
@@ -28,11 +27,11 @@ class SkeletonSettings extends AppSettings
 
     public function description(): string
     {
-        return 'Interact with Skeleton.';
+        return 'Interact with Facebook.';
     }
 
     public static function group(): string
     {
-        return 'skeleton';
+        return 'facebook';
     }
 }
